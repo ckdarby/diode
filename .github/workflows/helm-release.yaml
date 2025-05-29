@@ -35,7 +35,7 @@ jobs:
         id: extract_repos
         uses: mikefarah/yq@b534aa9ee5d38001fba3cd8fe254a037e4847b37 # v4.45.4
         with:
-          cmd: yq -o=tsv '.dependencies[] | [.name, .repository] | @tsv' diode/Chart.yaml
+          cmd: yq -o=tsv '.dependencies[] | [.name, .repository] | @tsv' charts/diode/Chart.yaml
       - name: Add Helm repos from dependencies
         run: |
           echo "${{ steps.extract_repos.outputs.result }}" | while IFS=$'\t' read -r name repo; do
