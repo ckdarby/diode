@@ -121,7 +121,7 @@ diodeIngester:
   config:
     # -- logging level
     loggingLevel: INFO
-    # -- sentry DSN 
+    # -- sentry DSN
     sentryDsn: ""
     # -- redis stream db
     redisStreamDb: 1
