@@ -1,8 +1,9 @@
 name: Helm - lint
+
 on:
   push:
-    branches-ignore:
-      - "release"
+    branches:
+      - "!release"
   pull_request:
 
 concurrency:
