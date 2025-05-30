@@ -56,7 +56,8 @@ jobs:
 
       - name: Run chart-testing (lint)
         if: steps.list-changed.outputs.changed == 'true'
-        run: ct lint --target-branch ${{ github.event.repository.default_branch }}
+        run: ct lint --skip-helm-dependencies --target-branch ${{ github.event.repository.default_branch }}
+
 
       - name: Create kind cluster
         if: steps.list-changed.outputs.changed == 'true'
