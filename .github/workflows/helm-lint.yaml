@@ -1,13 +1,9 @@
 name: Helm - lint
 on:
   push:
-    branches:
-      - "!release"
-    paths:
-      - "charts/**"
+    branches-ignore:
+      - "release"
   pull_request:
-    paths:
-      - "charts/**"
 
 concurrency:
   group: ${{ github.workflow }}
