@@ -1,3 +1,2 @@
 validate-maintainers: false
 skip-helm-dependencies: true
-check-version-increment: false
